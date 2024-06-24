@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./test/input.css">
+    <link rel="stylesheet" href="./form/styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="images-top"><img src="survey.png" alt=""></div>
+    <div class="top-bar">
+        <div class="red-box"></div>
+        <h2>Survey Form 2023</h2>
+        <div class="border"></div>
+        <p>*Please answer all the Questions</p>
+    </div>
+    <div class="section">
+        <div class="section1">
+            <p>Name</p>
+            <div class="wrapper">
+                <div class="input-data">
+                   <input type="text" placeholder="Your answer" name="Name" required>
+                   <div class="underline"></div>
+                </div>
+            </div>
+           <p class="question">Age</p>
+            <div class="wrapper">
+              <div class="input-data">
+               <input type="text" placeholder="Your answer" name="Age" required>
+               <div class="underline"></div>
+              </div>
+            </div>
+            <p class="question">What is your current grade level?</p>
+            <div>
+                <input type="radio" name="grade" value="Grade9">Grade 9 <br>
+                <input type="radio" name="grade" value="Grade10">Grade 10 <br>
+                <input type="radio" name="grade" value="Grade11">Grade 11 <br>
+                <input type="radio" name="grade" value="Grade12-failed">Grade 12 (failed) <br>
+                <input type="radio" name="grade" value="Grade12-pass">Grade 12 (pass) <br>
+            </div>
+            <p class="question">Where is your current learning place?</p>
+            <div>
+                <input type="radio" name="school" value="FSD">FSD <br>
+                <input type="radio" name="school" value="Public School">Public School <br>
+                <input type="radio" name="school" value="Private School">Private School <br>
+                <input type="radio" name="school" value="Partner NGO">Partner NGO <br>
+            </div>
+        </div>
+    </div>
+    <div class="section second-section">
+        <div class="section1">
+            <p class="line-height">How interested are you in learning web development?</p>
+            <div>
+                <input type="radio" name="feeling" value="Very-Interested">Very Interested <br>
+                <input type="radio" name="feeling" value="Interested">Interested <br>
+                <input type="radio" name="feeling" value="Neutral">Neutral <br>
+                <input type="radio" name="feeling" value="Not-Interested">Not Interested <br>
+                <input type="radio" name="feeling" value="Not-at-all-Interested">Not at all Interested <br>
+            </div>
+            <p class="question line-height">Have you had any previous experience with web development?</p>
+            <div>
+                <input type="radio" name="boolean" value="yes">Yes <br>
+                <input type="radio" name="boolean" value="no">No <br>
+            </div>
+            <p class="question line-height">If yes, please describe your experience (e.g., self-taught, school projects,
+                online courses, etc.):</p>
+                <div class="wrapper">
+                    <div class="input-data">
+                       <input type="text" placeholder="Your answer" name="Name" required>
+                       <div class="underline"></div>
+                    </div>
+                </div>
+            <p class="question line-height">Which aspects of web development interest you the most? (Select all that
+                apply)</p>
+                <div>
+                    <input type="checkbox" name="skill-interested" value="Front-end-Development">Front-end Development <br>
+                    <input type="checkbox" name="skill-interested" value="Back-end-Development">Back-end Development <br>
+                    <input type="checkbox" name="skill-interested" value="Full-stack-Development">Full-stack Development <br>
+                    <input type="checkbox" name="skill-interested" value="Mobile-Application-Development">Mobile Application Development <br>
+                    <input type="checkbox" name="skill-interested" value="Web-Design-and-User-Experience-(UX)">Web Design and User Experience (UX) <br>
+                    <div>
+                    <input type="checkbox" name="skill-interested" value="other">other: <br>
+                    <div class="wrapper">
+                        <div class="input-data">
+                           <input type="text" placeholder="Your answer" name="Name" required>
+                           <div class="underline"></div>
+                        </div>
+                    </div>
+                    </div>
+                </div>    
+        </div>
+    </div>
+    <div class="section third-section">
+        <div class="section1">
+            <p class="line-height">Are you familiar with the concept of active pedagogy?</p>
+            <div>
+                <input type="radio" name="boolean" value="yes">Yes <br>
+                <input type="radio" name="boolean" value="no">No <br>
+            </div>
+            <p class="line-height question">If yes, how would you describe your understanding of active pedagogy?</p>
+            <div class="wrapper">
+                <div class="input-data">
+                   <input type="text" placeholder="Your answer" name="Name" required>
+                   <div class="underline"></div>
+                </div>
+            </div>
+            <p class="question line-height">Have you ever participated in a learning activity that used active pedagogy
+                (e.g., project-based learning, collaborative learning, flipped classroom)?</p>
+                <div>
+                    <input type="radio" name="boolean" value="yes">Yes <br>
+                    <input type="radio" name="boolean" value="no">No <br>
+                </div>
+            <p class="question line-height">If yes, please describe the activity and your experience:</p>
+            <div class="wrapper">
+                <div class="input-data">
+                   <input type="text" placeholder="Your answer" name="Name" required>
+                   <div class="underline"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section fourth-section">
+        <div class="section1">
+            <p class="line-height">How do you prefer to learn new skills? (Select all that apply)</p>
+            <div>
+                <input type="checkbox" name="prefer-to-learn" value="Hands-on-projects">Hands-on projects <br>
+                <input type="checkbox" name="prefer-to-learn" value="Group-work-and-collaboration">Group-work-and-collaboration <br>
+                <input type="checkbox" name="prefer-to-learn" value="Lectures-and-presentations">Lectures and presentations <br>
+                <input type="checkbox" name="prefer-to-learn" value="Self-study">Self-study <br>
+                <div>
+                <input type="checkbox" name="prefer-to-learn" value="other">other: <br>
+                <div class="wrapper">
+                    <div class="input-data">
+                       <input type="text" placeholder="Your answer" name="Name" required>
+                       <div class="underline"></div>
+                    </div>
+                </div>
+                </div>
+            </div> 
+            <p class="line-height question">What type of learning environment do you find most effective?</p>
+            <div>
+                <input type="radio" name="learning-environment" value="Classroom-setting">Classroom-setting <br>
+                <input type="radio" name="learning-environment" value="Online-learning">Online learning <br>
+                <input type="radio" name="learning-environment" value="Blended-learning">Blended learning (a mix of online and in-person) <br>
+                <input type="radio" name="learning-environment" value="other">other: <br>
+                <div class="wrapper">
+                    <div class="input-data">
+                       <input type="text" placeholder="Your answer" name="Name" required>
+                       <div class="underline"></div>
+                    </div>
+                </div>
+            </div>
+            <p class="line-height question">How important is peer interaction in your learning process?</p>
+            <input type="radio" name="learning-process" value="Very-Important">Very Important <br>
+            <input type="radio" name="learning-process" value="Important">Important <br>
+            <input type="radio" name="learning-process" value="Neutral">Neutral <br>
+            <input type="radio" name="learning-process" value="Uncomfortable">Uncomfortable <br>
+            <input type="radio" name="learning-process" value="Very-Uncomfortable">Very Uncomfortable <br>
+        </div>
+    </div>
+</body>
+</html>
