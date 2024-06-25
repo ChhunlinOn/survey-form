@@ -15,29 +15,30 @@
         <div class="border"></div>
         <p>*Please answer all the Questions</p>
     </div>
+    <form id="form">
     <div class="section">
         <div class="section1">
             <p>Name</p>
             <div class="wrapper">
                 <div class="input-data">
-                   <input type="text" placeholder="Your answer" name="Name" required>
+                   <input type="text" placeholder="Your answer" name="Name" id="name" required>
                    <div class="underline"></div>
                 </div>
             </div>
            <p class="question">Age</p>
             <div class="wrapper">
               <div class="input-data">
-               <input type="text" placeholder="Your answer" name="Age" required>
+               <input type="text" placeholder="Your answer" name="Age" id="Age" required>
                <div class="underline"></div>
               </div>
             </div>
             <p class="question">What is your current grade level?</p>
             <div>
-                <input type="radio" name="grade" value="Grade9">Grade 9 <br>
-                <input type="radio" name="grade" value="Grade10">Grade 10 <br>
-                <input type="radio" name="grade" value="Grade11">Grade 11 <br>
-                <input type="radio" name="grade" value="Grade12-failed">Grade 12 (failed) <br>
-                <input type="radio" name="grade" value="Grade12-pass">Grade 12 (pass) <br>
+                <input type="radio" name="grade" value="Grade 9">Grade 9 <br>
+                <input type="radio" name="grade" value="Grade 10">Grade 10 <br>
+                <input type="radio" name="grade" value="Grade 11">Grade 11 <br>
+                <input type="radio" name="grade" value="Grade 12-failed">Grade 12 (failed) <br>
+                <input type="radio" name="grade" value="Grade 12-pass">Grade 12 (pass) <br>
             </div>
             <p class="question">Where is your current learning place?</p>
             <div>
@@ -108,8 +109,8 @@
             <p class="question line-height">Have you ever participated in a learning activity that used active pedagogy
                 (e.g., project-based learning, collaborative learning, flipped classroom)?</p>
                 <div>
-                    <input type="radio" name="boolean" value="yes">Yes <br>
-                    <input type="radio" name="boolean" value="no">No <br>
+                    <input type="radio" name="ok/not" value="yes">Yes <br>
+                    <input type="radio" name="ok/not" value="no">No <br>
                 </div>
             <p class="question line-height">If yes, please describe the activity and your experience:</p>
             <div class="wrapper">
@@ -152,12 +153,73 @@
                 </div>
             </div>
             <p class="line-height question">How important is peer interaction in your learning process?</p>
+            <div>
             <input type="radio" name="learning-process" value="Very-Important">Very Important <br>
             <input type="radio" name="learning-process" value="Important">Important <br>
             <input type="radio" name="learning-process" value="Neutral">Neutral <br>
             <input type="radio" name="learning-process" value="Uncomfortable">Uncomfortable <br>
             <input type="radio" name="learning-process" value="Very-Uncomfortable">Very Uncomfortable <br>
+            </div>
         </div>
     </div>
+    <div class="section fifth-section">
+        <div class="section1">
+            <p class="line-height">What do you hope to achieve by learning web development? (Select all that
+                apply)</p>
+            <div>
+                <input type="checkbox" name="learning">Gain basic knowledge and skills <br>
+                <input type="checkbox" name="learning">Develop advanced skills for career opportunities <br>
+                <input type="checkbox" name="learning">Build personal projects and portfolios <br>
+                <input type="checkbox" name="learning">Prepare for further education in computer science <br>
+                <input type="checkbox" name="learning">other: <br>
+                <div class="wrapper">
+                    <div class="input-data">
+                       <input type="text" placeholder="Your answer" name="answer" required>
+                       <div class="underline"></div>
+                    </div>
+                </div>
+            </div>
+            <p class="line-height question">How do you think web development skills will help you in your future career or
+                studies?</p>
+                <div class="wrapper">
+                    <div class="input-data">
+                       <input type="text" placeholder="Your answer" name="answer" required>
+                       <div class="underline"></div>
+                    </div>
+                </div>
+            <p class="line-height question">Are there any specific topics or technologies you would like to learn in web development training?</p>
+            <div class="wrapper">
+                <div class="input-data">
+                   <input type="text" placeholder="Your answer" name="answer" required>
+                   <div class="underline"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section sixth-section">
+        <div class="section1">
+            <p class="line-height">Do you have any suggestions for how the web development training could be
+                improved to better suit your needs and interests?</p>
+                <div class="wrapper">
+                    <div class="input-data">
+                       <input type="text" placeholder="Your answer" name="answer" required>
+                       <div class="underline"></div>
+                    </div>
+                </div>
+            <p class="line-height question">Is there anything else you would like to share about your interest in web
+                development or your learning preferences?</p>
+                <div class="wrapper">
+                    <div class="input-data">
+                       <input type="text" placeholder="Your answer" name="answer" required>
+                       <div class="underline"></div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <div style="width: 331px; height: auto; display: flex; align-items: center; justify-content: center; margin-top: 15px;">
+    <button type="submit">Submit</button>
+    </div>
+    </form>
+    <script src="./form/script.js"></script>
 </body>
 </html>

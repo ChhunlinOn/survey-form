@@ -7,11 +7,34 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="wrapper">
-         <div class="input-data">
-            <input type="text" placeholder="Your answer" required>
-            <div class="underline"></div>
-         </div>
-    </div>
+    <form id="form">
+        <div>
+            <input type="radio" name="school" value="FSD">FSD <br>
+            <input type="radio" name="school" value="Public School">Public School <br>
+            <input type="radio" name="school" value="Private School">Private School <br>
+            <input type="radio" name="school" value="Partner NGO">Partner NGO <br>
+        </div>
+        <div>
+            <input type="radio" name="grade" value="Grade 9">Grade 9 <br>
+            <input type="radio" name="grade" value="Grade 10">Grade 10 <br>
+            <input type="radio" name="grade" value="Grade 11">Grade 11 <br>
+            <input type="radio" name="grade" value="Grade 12-failed">Grade 12 (failed) <br>
+            <input type="radio" name="grade" value="Grade 12-pass">Grade 12 (pass) <br>
+        </div>
+    <button type="submit">submit</button>
+    </form>
+    <script>
+        
+        let form = document.getElementById('form');
+
+        form.addEventListener("submit",function(event){
+             event.preventDefault();
+
+             let grade = document.querySelector('input[type="radio"]:checked','input[name="grade"]').value
+             
+             console.log(grade);
+        })
+       
+    </script>
 </body>
 </html>
