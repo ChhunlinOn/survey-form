@@ -9,32 +9,56 @@
 <body>
     <form id="form">
         <div>
-            <input type="radio" name="school" value="FSD">FSD <br>
-            <input type="radio" name="school" value="Public School">Public School <br>
-            <input type="radio" name="school" value="Private School">Private School <br>
-            <input type="radio" name="school" value="Partner NGO">Partner NGO <br>
-        </div>
-        <div>
-            <input type="radio" name="grade" value="Grade 9">Grade 9 <br>
-            <input type="radio" name="grade" value="Grade 10">Grade 10 <br>
-            <input type="radio" name="grade" value="Grade 11">Grade 11 <br>
-            <input type="radio" name="grade" value="Grade 12-failed">Grade 12 (failed) <br>
-            <input type="radio" name="grade" value="Grade 12-pass">Grade 12 (pass) <br>
-        </div>
-    <button type="submit">submit</button>
+            <input type="checkbox" name="skill-interested" value="Front-end-Development">Front-end Development <br>
+            <input type="checkbox" name="skill-interested" value="Back-end-Development">Back-end Development <br>
+            <input type="checkbox" name="skill-interested" value="Full-stack-Development">Full-stack Development <br>
+            <input type="checkbox" name="skill-interested" value="Mobile-Application-Development">Mobile Application Development <br>
+            <input type="checkbox" name="skill-interested" value="Web-Design-and-User-Experience-(UX)">Web Design and User Experience (UX) <br>
+            <div>
+                <input type="checkbox" name="skill-interested" onclick="clickOther()" id="skill-interested">Other: <br>
+                <div class="wrapper">
+                    <div class="input-data">
+                        <input type="text" placeholder="Your answer" id="skill-interested1" disabled>
+                        <div class="underline"></div>
+                    </div>
+                </div>
+            </div>
+        </div>   
+        <button type="submit">Submit</button>
     </form>
+
     <script>
-        
         let form = document.getElementById('form');
 
-        form.addEventListener("submit",function(event){
-             event.preventDefault();
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
+            
 
-             let grade = document.querySelector('input[type="radio"]:checked','input[name="grade"]').value
-             
-             console.log(grade);
-        })
-       
+            let selectedSkillsValue = [];
+            let selectedSkills = document.querySelectorAll('input[type="checkbox"][name="skill-interested"]');
+            for (var i=0;i<selectedSkills.length;i++){
+                if(selectedSkills[i].checked === true){
+                    selectedSkillsValue.push(selectedSkills[i].value);
+                }
+            }
+            console.log('Selected Skills: ', selectedSkillsValue);
+        });
+        let textOther = document.getElementById('skill-interested1');
+            let Other = document.getElementById('skill-interested');
+            function clickOther(){
+            if(Other.checked === true){
+                  textOther.removeAttribute("disabled");
+               }else{
+                  textOther.setAttribute("disabled", "");
+                  textOther.value='';
+                };
+                };
+            textOther.addEventListener("input",function(){
+                if(Other.checked){
+                    Other.value = this.value;
+                }
+            })
+
     </script>
 </body>
 </html>

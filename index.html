@@ -28,7 +28,7 @@
            <p class="question">Age</p>
             <div class="wrapper">
               <div class="input-data">
-               <input type="text" placeholder="Your answer" name="Age" id="Age" required>
+               <input type="email" placeholder="Your answer" name="email" id="email" required>
                <div class="underline"></div>
               </div>
             </div>
@@ -68,7 +68,7 @@
                 online courses, etc.):</p>
                 <div class="wrapper">
                     <div class="input-data">
-                       <input type="text" placeholder="Your answer" name="Name" required>
+                       <input type="text" placeholder="Your answer" name="Q8" required>
                        <div class="underline"></div>
                     </div>
                 </div>
@@ -81,41 +81,41 @@
                     <input type="checkbox" name="skill-interested" value="Mobile-Application-Development">Mobile Application Development <br>
                     <input type="checkbox" name="skill-interested" value="Web-Design-and-User-Experience-(UX)">Web Design and User Experience (UX) <br>
                     <div>
-                    <input type="checkbox" name="skill-interested" value="other">other: <br>
-                    <div class="wrapper">
-                        <div class="input-data">
-                           <input type="text" placeholder="Your answer" name="Name" required>
-                           <div class="underline"></div>
+                        <input type="checkbox" name="skill-interested" onclick="clickOther()" id="skill-interested">Other: <br>
+                        <div class="wrapper">
+                            <div class="input-data">
+                                <input type="text" placeholder="Your answer" id="skill-interested1" disabled>
+                                <div class="underline"></div>
+                            </div>
                         </div>
                     </div>
-                    </div>
-                </div>    
+                </div> 
         </div>
     </div>
     <div class="section third-section">
         <div class="section1">
             <p class="line-height">Are you familiar with the concept of active pedagogy?</p>
             <div>
-                <input type="radio" name="boolean" value="yes">Yes <br>
-                <input type="radio" name="boolean" value="no">No <br>
+                <input type="radio" name="Q10" value="yes">Yes <br>
+                <input type="radio" name="Q10" value="no">No <br>
             </div>
             <p class="line-height question">If yes, how would you describe your understanding of active pedagogy?</p>
             <div class="wrapper">
                 <div class="input-data">
-                   <input type="text" placeholder="Your answer" name="Name" required>
+                   <input type="text" placeholder="Your answer" name="Q11" required>
                    <div class="underline"></div>
                 </div>
             </div>
             <p class="question line-height">Have you ever participated in a learning activity that used active pedagogy
                 (e.g., project-based learning, collaborative learning, flipped classroom)?</p>
                 <div>
-                    <input type="radio" name="ok/not" value="yes">Yes <br>
-                    <input type="radio" name="ok/not" value="no">No <br>
+                    <input type="radio" name="Q12" value="yes">Yes <br>
+                    <input type="radio" name="Q12" value="no">No <br>
                 </div>
             <p class="question line-height">If yes, please describe the activity and your experience:</p>
             <div class="wrapper">
                 <div class="input-data">
-                   <input type="text" placeholder="Your answer" name="Name" required>
+                   <input type="text" placeholder="Your answer" name="Q13" required>
                    <div class="underline"></div>
                 </div>
             </div>
@@ -130,10 +130,10 @@
                 <input type="checkbox" name="prefer-to-learn" value="Lectures-and-presentations">Lectures and presentations <br>
                 <input type="checkbox" name="prefer-to-learn" value="Self-study">Self-study <br>
                 <div>
-                <input type="checkbox" name="prefer-to-learn" value="other">other: <br>
+                <input type="checkbox" onclick="preferlearn()" name="prefer-to-learn" id="otherQ14" value="other">other: <br>
                 <div class="wrapper">
                     <div class="input-data">
-                       <input type="text" placeholder="Your answer" name="Name" required>
+                       <input type="text" placeholder="Your answer" name="Q14" disabled>
                        <div class="underline"></div>
                     </div>
                 </div>
@@ -144,10 +144,10 @@
                 <input type="radio" name="learning-environment" value="Classroom-setting">Classroom-setting <br>
                 <input type="radio" name="learning-environment" value="Online-learning">Online learning <br>
                 <input type="radio" name="learning-environment" value="Blended-learning">Blended learning (a mix of online and in-person) <br>
-                <input type="radio" name="learning-environment" value="other">other: <br>
+                <input type="radio" name="learning-environment" onclick="learning_environment()" id="otherQ15" value="other">other: <br>
                 <div class="wrapper">
                     <div class="input-data">
-                       <input type="text" placeholder="Your answer" name="Name" required>
+                       <input type="text" placeholder="Your answer" name="Q15" disabled>
                        <div class="underline"></div>
                     </div>
                 </div>
@@ -157,9 +157,17 @@
             <input type="radio" name="learning-process" value="Very-Important">Very Important <br>
             <input type="radio" name="learning-process" value="Important">Important <br>
             <input type="radio" name="learning-process" value="Neutral">Neutral <br>
-            <input type="radio" name="learning-process" value="Uncomfortable">Uncomfortable <br>
-            <input type="radio" name="learning-process" value="Very-Uncomfortable">Very Uncomfortable <br>
+            <input type="radio" name="learning-process" value="Not Important">Not Important <br>
+            <input type="radio" name="learning-process" value="Not at all Important">Not at all Important <br>
             </div>
+            <p class="line-height question">How do you feel about receiving feedback and support from instructors during your learning process?</p>
+            <div>
+                <input type="radio" name="feedback" value="Very Comfortable">Very Comfortable <br>
+                <input type="radio" name="feedback" value="Comfortable">Comfortable <br>
+                <input type="radio" name="feedback" value="Neutral">Neutral <br>
+                <input type="radio" name="feedback" value="Uncomfortable">Uncomfortable <br>
+                <input type="radio" name="feedback" value="Very-Uncomfortable">Very Uncomfortable <br>
+                </div>
         </div>
     </div>
     <div class="section fifth-section">
@@ -171,10 +179,10 @@
                 <input type="checkbox" name="learning">Develop advanced skills for career opportunities <br>
                 <input type="checkbox" name="learning">Build personal projects and portfolios <br>
                 <input type="checkbox" name="learning">Prepare for further education in computer science <br>
-                <input type="checkbox" name="learning">other: <br>
+                <input type="checkbox" name="learning" onclick="study()" id="learning1">other: <br>
                 <div class="wrapper">
                     <div class="input-data">
-                       <input type="text" placeholder="Your answer" name="answer" required>
+                       <input type="text" placeholder="Your answer" name="Q18" disabled>
                        <div class="underline"></div>
                     </div>
                 </div>
@@ -183,14 +191,14 @@
                 studies?</p>
                 <div class="wrapper">
                     <div class="input-data">
-                       <input type="text" placeholder="Your answer" name="answer" required>
+                       <input type="text" placeholder="Your answer" name="Q19" required>
                        <div class="underline"></div>
                     </div>
                 </div>
             <p class="line-height question">Are there any specific topics or technologies you would like to learn in web development training?</p>
             <div class="wrapper">
                 <div class="input-data">
-                   <input type="text" placeholder="Your answer" name="answer" required>
+                   <input type="text" placeholder="Your answer" name="Q20" required>
                    <div class="underline"></div>
                 </div>
             </div>
@@ -202,7 +210,7 @@
                 improved to better suit your needs and interests?</p>
                 <div class="wrapper">
                     <div class="input-data">
-                       <input type="text" placeholder="Your answer" name="answer" required>
+                       <input type="text" placeholder="Your answer" name="Q21" required>
                        <div class="underline"></div>
                     </div>
                 </div>
@@ -210,7 +218,7 @@
                 development or your learning preferences?</p>
                 <div class="wrapper">
                     <div class="input-data">
-                       <input type="text" placeholder="Your answer" name="answer" required>
+                       <input type="text" placeholder="Your answer" name="Q22" required>
                        <div class="underline"></div>
                     </div>
                 </div>
