@@ -54,25 +54,25 @@ body{
     margin-top: 15px;
     background-color: white;
     width: 331px;
-    height: 515px;
+    height: 540px;
     padding: 15px;
     box-sizing: border-box;
     border-radius: 20px;
 }
 .second-section{
-    height: 760px;
+    height: 800px;
 }
 .third-section{
-    height: 515px;
+    height: 530px;
 }
 .fourth-section{
-    height: 985px;
+    height: 1020px;
 }
 .fifth-section{
-    height: 515px;
+    height: 560px;
 }
 .sixth-section{
-    height: 265px;
+    height: 270px;
 }
 .section1{
     width: 100%;
