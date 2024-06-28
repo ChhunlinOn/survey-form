@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>parentNode Example</title>
+</head>
+<body>
+    <div class="marginforfieds">
+        <input type="checkbox">
+        <label for="title"><strong>Title1:</strong></label>
+        <input type="checkbox" id="titlebox">
+        <label for="title"><strong>Title:</strong></label>
+        <p></p>
+        <input type="text" class="form-control" id="titletext" disabled>
+     </div>
+     <div class="compilelines">
+        <hr>
+     </div>
+     <div class="marginforfieds">
+        <input type="checkbox" id="descriptionbox">
+        <label for="description"><strong>Description:</strong></label>
+        <p></p>
+        <input type="text" class="form-control" id="descriptiontext" disabled>
+     </div>
+  <script>
+   function enableNextTextBox()
+{
+  let textBox = [... this.parentNode.querySelectorAll('[type="text"]')][0];
+  if (textBox)
+  {
+    if (this.checked)
+    {
+      textBox.removeAttribute("disabled");
+    }
+    else
+    {
+      textBox.setAttribute("disabled", "");
+    }
+  }
+}
+
+let checkboxes =  [... document.querySelectorAll('[type="checkbox"]')][1];
+
+checkboxes.forEach(function (checkbox)
+{
+  checkbox.addEventListener('click', enableNextTextBox);
+});
+  </script>
+</body>
+</html>
