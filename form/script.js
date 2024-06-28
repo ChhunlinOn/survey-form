@@ -131,6 +131,7 @@ form.addEventListener("submit", function(event) {
       })
       .then(function (data) {
         console.log(data);
+        window.location.href = "./thank/index.html";
       })
       .catch(function (error) {
         console.error("Error:", error);
